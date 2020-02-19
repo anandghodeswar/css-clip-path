@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* common classes */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* common classes */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media (max-width: 767px) {
+  .transition-mobile-page {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 90vw;
+    z-index: 1000;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-clip-path: circle(0% at 83% 5%);
+            clip-path: circle(0% at 83% 5%);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .transition-mobile-page + .overlay {
+    -webkit-clip-path: circle(0% at 83% 5%);
+            clip-path: circle(0% at 83% 5%);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .transition-mobile-page.show {
+    background-color: #fbfbfb;
+    -webkit-clip-path: circle(100% at 80% 50%);
+            clip-path: circle(100% at 80% 50%);
+  }
+  .transition-mobile-page.show + .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    -webkit-clip-path: circle(100% at 80% 50%);
+            clip-path: circle(100% at 80% 50%);
+  }
+}
+
+/*transition *****************************************************/
+/*transition *****************************************************/
+/*# sourceMappingURL=main.css.map */
